@@ -16,8 +16,10 @@ return
 InputBox, name,Bitte Dateinamen auswählen
 FileAppend,,%name%.txt
 x = ""
-Run %name%.txt,,,x
+Run, %name%.txt,,,x
 WinActivate, ahk_pid %x%
-Send, ^v
-WinClose, ahk_pid
+Send, {Ctrl}v
+;WinClose, ahk_pid %x%
 return
+
+
